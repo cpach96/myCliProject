@@ -1,5 +1,6 @@
 require "./lib/myCliProject/version"
 require_relative "./myCliProject/cli" 
+require_relative "./myCliProject/api" 
 require 'pry'
 require 'httparty'
 

@@ -1,8 +1,12 @@
 class MyCliProject::API
-    def fetch
-        url = "https://api.rawg.io/api/games?dates=2001-01-01,2001-12-31&ordering=-rating"
+
+    def fetch(game)
+        url = "https://api.rawg.io/api/games/#{game}"
         response = HTTParty.get(url)
         binding.pry
+        #response["results"].each do |game|
+            #puts game["name"]
+
     end
 
 
