@@ -3,3 +3,12 @@
 1. git add . 
 2. git commit -m 'message highligting changes you've done"
 3. git push origin master
+
+uses
+every game has a name
+every game has a release date
+every game has a description
+
+release date and description belong to game 
+game.description
+game.release_date
