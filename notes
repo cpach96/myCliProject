@@ -1,6 +1,7 @@
 # for saving
 
 1. git add . 
+check status with git status . All green means good to go
 2. git commit -m 'message highligting changes you've done"
 3. git push origin master
 
@@ -12,3 +13,6 @@ every game has a description
 release date and description belong to game 
 game.description
 game.release_date
+
+ description = response["description"]
+release_date = response["released"]

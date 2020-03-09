@@ -1,9 +1,10 @@
 class MyCliProject::Game
-    attr_accessor :name
+    attr_accessor :game_name
     @@all = []
     
-    def initialize(name)
-        @name = name
+    def initialize(game_name)
+        @game_name = game_name
+     
         @@all << self
     end
 
