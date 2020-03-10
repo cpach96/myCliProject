@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Enter bin/myCliProject in the terminal to search your desired game and follow addition prompts!
 
 ## Development
 
