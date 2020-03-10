@@ -4,41 +4,62 @@ class MyCliProject::Cli
         puts "Welcome to my first project!"
         puts "What video game would you like to know about?"
         input = gets.chomp.gsub!(" ","-")
-       # puts "Ah #{input} great game! What would you like to know"
-       # puts "Type either 'description', or 'release date'
         MyCliProject::API.new.fetch(input)
         show_games
            
     end
 
     def show_games
-        MyCliProject::Description.all.each.with_index(1) do |game,index|
-           puts "----------------------------------------"
-           puts "#{index}. #{game.description}"
-           puts "----------------------------------------"
-           next_option
+        puts "------------------------------"
+        puts  MyCliProject::Description.all.last.description
+        puts "------------------------------"
+        continue_or_exit
+    end
+
+    def game_history
+        MyCliProject::Game.all.each do |game|
+            puts "-------------------------"
+            puts "#{game.game_name}"
+            puts "-------------------------"
+        end
+        continue_or_exit 
+    end
+
+    def continue_or_exit
+        puts "Would you like to learn about another game? Specify y to create a new search, 'more options' or exit"
+        input = gets.chomp.downcase
+        if input == "y"
+            call
+        elsif input == "more options"
+            puts "Specify your additional options for your search: 'release date', 'search history', or go back"
+            new_input = gets.chomp.downcase
+        if
+            new_input == "release date"
+            option_release_date
+
+        elsif new_input == "search history"
+            game_history
+
+        elsif new_input == "go back"
+            continue_or_exit
+        else
+
+        end
+
+        elsif input == "exit"
+            puts "Goodbye!"
+        
+        else 
+            puts "input not recognized please try again"
+            continue_or_exit
         end
     end
 
-    def next_option
-        puts "Would you like to know more about the game you searched? Specify y or n"
-        input = gets.chomp.downcase
-        if input == "y"
-                MyCliProject::Description.all.each.with_index(1) do |game,index|
-                puts "----------------------------------------"
-                puts "#{index}. #{game.release_date}"
-                puts "----------------------------------------"
-            end
-        elsif input == "n"
-            puts "Okay.. Would you like to search another game? Specify y or n"
-            input = gets.chomp.downcase
-        if
-            input == "y"
-            call
-        else
-            puts "Goodbye!"
-            end
-        end
+    def option_release_date
+            puts "------------------------------"
+            puts  MyCliProject::Description.all.last.release_date
+            puts "------------------------------"
+            continue_or_exit
     end
 
 end

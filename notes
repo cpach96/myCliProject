@@ -16,3 +16,8 @@ game.release_date
 
  description = response["description"]
 release_date = response["released"]
+
+Project Overview
+1. Asks user for input ie "Game name" and displays a description of the game searched
+2. User can obtain more options about said game including release date.
+3. User can also search history of previous searches.
