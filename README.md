@@ -1,8 +1,6 @@
 # MyCliProject
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/myCliProject`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to my first project! Sorry about the name not very descriptive, but this allows you to search a video game by name and get a description of what it is and additional information. Uses RAWG API to supply a near limitless amount of titles to learn about. To run simply enter bin/MyCliProject
 
 ## Installation
 
