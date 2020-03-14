@@ -14,3 +14,5 @@ class MyCliProject::Game
     end
 
 end
+
+#Instanciates Object Game with attributes for name, description and release date and saves it to the @@all array so its accessable for Class CLI.
